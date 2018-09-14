@@ -5,7 +5,7 @@ with open("readme.md", "r") as fh:
 
 setuptools.setup(
     name="imparaai-checkers",
-    version="1.0.0",
+    version="1.1.0",
     license='MIT',
     author="ImparaAI",
     author_email="author@example.com",
