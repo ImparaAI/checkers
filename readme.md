@@ -1,5 +1,9 @@
 A Python3 library that you can use to play a game of checkers/draughts. This is just a set of classes that you can use in your code, it's not an interactive shell checkersgame.
 
+- **Version:** 1.0.0
+
+[![Build Status](https://travis-ci.org/ImparaAI/checkers.png?branch=master)](https://travis-ci.org/ImparaAI/checkers)
+
 # Assumptions
 
 The rules used are for competitive American checkers or English draughts. This means an 8x8 board with force captures and regular kings.
