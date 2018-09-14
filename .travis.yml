@@ -1,8 +1,18 @@
 language: python
 python:
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.6"
+- "3.3"
+- "3.4"
+- "3.5"
+- "3.6"
 script:
-  - python -m unittest discover
+- python -m unittest discover
+deploy:
+  provider: pypi
+  user: "janhartigan"
+  password:
+    secure: A6BeCJOGx0JZCekMV691wQ9fgQk6VK7eqOJtJPBEEWvtW0dBoofDRJfbI98Lf6Bm5s45PXVJR9C2kCUwrkW2+hIZ8i+0m8K7VkG6/2d6eekEPu1PPbm6nQifgsgUKIIPssUH4y3eKXZx4ifLTdFDvzxw+b0fxWjs1E+/q2TVHklMx78flbFT7WYOGgaCDy66G+zrJhow11o0+ZtBjg7umNLqZ+mZQU1+RfwQFuxOgoWIU00gWlmOOlzaW2DdxlSHf07dYl2wnMiExDAmTwQU+tYGmBHvRxOkco5H0kmRWpe9jfo3wBzyNqkqMBvODJ7+i9fV9yzLgJCLgBGjz89jDCoAv4qApU9Av3DRZg4/08snhiMJEy6Ck1vWbJVWgfKFRZ2tAO+iy8FJ/J+tbmqmaeITWaNqBDh3wn+CALtedLx4bkNUI7cl7L5k7gpB9KixDkczjZSUyCLRbNOzk+wYYvX65P8QtNXoAg22QOFB8VJhcHSbYRzW7364QVGufZjuT1wl1P0aHFMT9++y/dfdHWARaBrtsJQRCb1mzh8Ha29zfJrQeYgtVRv+uSojbxHbCqJOheLEoo2PPLTEWPRjVtUOzSSW7/TIh7NfzLHtOomvZvS3wUddqx6wWtOisWYWqOF1xiAqwgaXZdCklddivIXum+2rtirI0mN7MVMawiw=
+  on:
+    tags: true
+notifications:
+  email:
+    on_success: never
