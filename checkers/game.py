@@ -4,7 +4,6 @@ class Game:
 
 	def __init__(self):
 		self.board = Board()
-		self.boards = [self.board];
 		self.moves = []
 		self.move_limit = 50
 
@@ -13,7 +12,6 @@ class Game:
 			raise ValueError('The provided move is not possible')
 
 		self.board = self.board.create_new_board_from_move(move)
-		self.boards.append(self.board)
 		self.moves.append(move)
 
 		return self

@@ -66,7 +66,7 @@ class Board:
 
 	def move_piece(self, move):
 		self.searcher.get_piece_by_position(move[0]).move(move[1])
-		self.pieces = sorted(self.pieces, key=lambda piece: piece.position if piece.position else 0)
+		self.pieces = sorted(self.pieces, key = lambda piece: piece.position if piece.position else 0)
 
 	def is_valid_row_and_column(self, row, column):
 		if row < 0 or row >= self.height:
@@ -81,4 +81,6 @@ class Board:
 		super(Board, self).__setattr__(name, value)
 
 		if name == 'pieces':
+			[piece.reset_for_new_board() for piece in self.pieces]
+
 			self.searcher.build(self)

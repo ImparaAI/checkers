@@ -10,6 +10,11 @@ class Piece:
 		self.position = None
 		self.board = None
 		self.capture_move_enemies = {}
+		self.reset_for_new_board()
+
+	def reset_for_new_board(self):
+		self.possible_capture_moves = None
+		self.possible_positional_moves = None
 
 	def is_movable(self):
 		return (self.get_possible_capture_moves() or self.get_possible_positional_moves()) and not self.captured
@@ -23,6 +28,12 @@ class Piece:
 		self.king = self.king or self.is_on_enemy_home_row()
 
 	def get_possible_capture_moves(self):
+		if self.possible_capture_moves == None:
+			self.possible_capture_moves = self.build_possible_capture_moves()
+
+		return self.possible_capture_moves
+
+	def build_possible_capture_moves(self):
 		adjacent_enemy_positions = list(filter((lambda position: position in self.board.searcher.get_positions_by_player(self.other_player)), self.get_adjacent_positions()))
 		capture_move_positions = []
 
@@ -48,6 +59,12 @@ class Piece:
 		return self.board.position_layout.get(row_behind_enemy, {}).get(column_behind_enemy)
 
 	def get_possible_positional_moves(self):
+		if self.possible_positional_moves == None:
+			self.possible_positional_moves = self.build_possible_positional_moves()
+
+		return self.possible_positional_moves
+
+	def build_possible_positional_moves(self):
 		new_positions = list(filter((lambda position: self.board.position_is_open(position)), self.get_adjacent_positions()))
 
 		return self.create_moves_from_new_positions(new_positions)
