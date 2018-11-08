@@ -81,4 +81,6 @@ class Board:
 		super(Board, self).__setattr__(name, value)
 
 		if name == 'pieces':
+			[piece.reset_for_new_board() for piece in self.pieces]
+
 			self.searcher.build(self)
