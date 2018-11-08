@@ -52,10 +52,9 @@ Find out who won:
 game.get_winner() #None or 1 or 2
 ```
 
-Review the board and move history:
+Review the move history:
 
 ```python
-game.boards #[Board, Board, ...]
 game.moves #[[int, int], [int, int], ...]
 ```
 
