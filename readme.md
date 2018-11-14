@@ -1,6 +1,6 @@
 A Python3 library that you can use to play a game of checkers/draughts. This is just a set of classes that you can use in your code, it's not an interactive shell checkersgame.
 
-- **Version:** 1.3.0
+- **Version:** 1.4.0
 
 [![Build Status](https://travis-ci.org/ImparaAI/checkers.png?branch=master)](https://travis-ci.org/ImparaAI/checkers)
 
@@ -58,11 +58,10 @@ Review the move history:
 game.moves #[[int, int], [int, int], ...]
 ```
 
-Set a move limit and see if it's overrun:
+Change the consecutive noncapture move limit (default `40` according to the [rules](http://www.usacheckers.com/rulesofcheckers.php)):
 
 ```python
-game = Game()
-game.move_limit = 100
+game.consecutive_noncapture_move_limit = 20
 game.move_limit_reached() #True or False
 ```
 
@@ -78,3 +77,7 @@ for piece in game.board.pieces:
 	piece.get_possible_capture_moves() #[[int, int], [int, int], ...]
 	piece.get_possible_positional_moves() #[[int, int], [int, int], ...]
 ```
+
+# Testing
+
+Run `python3 -m unittest discover` from the root.

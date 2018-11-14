@@ -13,6 +13,7 @@ class Board:
 		self.rows_per_user_with_pieces = 3
 		self.position_layout = {}
 		self.piece_requiring_further_capture_moves = None
+		self.previous_move_was_capture = False
 		self.searcher = BoardSearcher()
 		BoardInitializer(self).initialize()
 
@@ -44,6 +45,7 @@ class Board:
 		return new_board
 
 	def perform_capture_move(self, move):
+		self.previous_move_was_capture = True
 		piece = self.searcher.get_piece_by_position(move[0])
 		originally_was_king = piece.king
 		enemy_piece = piece.capture_move_enemies[move[1]]
@@ -58,6 +60,7 @@ class Board:
 			self.switch_turn()
 
 	def perform_positional_move(self, move):
+		self.previous_move_was_capture = False
 		self.move_piece(move)
 		self.switch_turn()
 
