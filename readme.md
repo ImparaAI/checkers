@@ -77,3 +77,7 @@ for piece in game.board.pieces:
 	piece.get_possible_capture_moves() #[[int, int], [int, int], ...]
 	piece.get_possible_positional_moves() #[[int, int], [int, int], ...]
 ```
+
+# Testing
+
+Run `python3 -m unittest discover` from the root.
