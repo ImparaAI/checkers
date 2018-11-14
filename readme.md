@@ -58,11 +58,10 @@ Review the move history:
 game.moves #[[int, int], [int, int], ...]
 ```
 
-Set a move limit and see if it's overrun:
+Change the consecutive noncapture move limit (default `40` according to the [rules](http://www.usacheckers.com/rulesofcheckers.php)):
 
 ```python
-game = Game()
-game.move_limit = 100
+game.consecutive_noncapture_move_limit = 20
 game.move_limit_reached() #True or False
 ```
 
