@@ -1,6 +1,6 @@
 A Python3 library that you can use to play a game of checkers/draughts. This is just a set of classes that you can use in your code, it's not an interactive shell checkersgame.
 
-- **Version:** 1.4.0
+- **Version:** 1.4.1
 
 [![Build Status](https://travis-ci.org/ImparaAI/checkers.png?branch=master)](https://travis-ci.org/ImparaAI/checkers)
 
