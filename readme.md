@@ -17,7 +17,7 @@ Each piece movement is completely distinct, even if the move is part of a multip
 Create a new game:
 
 ```python
-from checkers import Game
+from checkers.game import Game
 
 game = Game()
 ```
