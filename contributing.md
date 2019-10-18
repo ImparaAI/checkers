@@ -1,0 +1,3 @@
+# Contributing
+
+Fork from the `dev` branch. Also submit your PR to the `dev` branch. PRs that are submitted to the `master` branch will be closed immediately. Merge the latest changes from the `dev` branch before you submit the pull request. If you have a request that can't be automatically merged, you may be asked to marge the latest changes and resubmit it. If applicable, add documentation for your changes to the relevant section in the readme. Also if your change affects the interface, please submit any necessary unit tests along with your PR.

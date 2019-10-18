@@ -1,6 +1,6 @@
 A Python3 library that you can use to play a game of checkers/draughts. This is just a set of classes that you can use in your code, it's not an interactive shell checkersgame.
 
-- **Version:** 1.4.1
+- **Version:** 1.4.2
 
 [![Build Status](https://travis-ci.org/ImparaAI/checkers.png?branch=master)](https://travis-ci.org/ImparaAI/checkers)
 
@@ -17,7 +17,7 @@ Each piece movement is completely distinct, even if the move is part of a multip
 Create a new game:
 
 ```python
-from checkers import Game
+from checkers.game import Game
 
 game = Game()
 ```
